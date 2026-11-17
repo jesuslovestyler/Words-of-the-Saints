@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Words of the Saints</title>
+    <meta name="description" content="A collection of quotes from the saints for learning about our brothers and sisters in Christ." />
+    <meta property="og:title" content="Words of the Saints" />
+    <meta property="og:description" content="A collection of quotes from the saints for learning about our brothers and sisters in Christ." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jesuslovestyler.github.io/Words-of-the-Saints/" />
+    <meta property="og:image" content="https://jesuslovestyler.github.io/Words-of-the-Saints/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Words of the Saints" />
+    <meta name="twitter:description" content="A collection of quotes from the saints for learning about our brothers and sisters in Christ." />
+    <meta name="twitter:image" content="https://jesuslovestyler.github.io/Words-of-the-Saints/og-image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2.25rem; }
+
+      :root {
+        --paper: #f7f1e5;
+        --paper-deep: #efe4cf;
+        --card: #fffdf7;
+        --ink: #2e2118;
+        --ink-soft: #5d4c3a;
+        --ink-faint: #857257;
+        --wine: #7c2d35;
+        --wine-deep: #5d1f26;
+        --gold: #a97e2f;
+        --gold-soft: #d9c08a;
+        --line: #ddcfb2;
+        --chip-bg: #fffdf7;
+        --shadow: 0 1px 3px rgba(62, 42, 18, .10), 0 8px 24px rgba(62, 42, 18, .06);
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --paper: #191410;
+          --paper-deep: #211a13;
+          --card: #241c14;
+          --ink: #f0e5cf;
+          --ink-soft: #cdbb9c;
+          --ink-faint: #9d8a6b;
+          --wine: #d98a92;
+          --wine-deep: #e8a7ae;
+          --gold: #d3a94f;
+          --gold-soft: #6e5a2e;
+          --line: #453723;
+          --chip-bg: #241c14;
+          --shadow: 0 1px 3px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.35);
+          color-scheme: dark;
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Spectral", Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        line-height: 1.55;
+      }
+
+      .wrap { max-width: 1060px; margin: 0 auto; padding: 0 18px 64px; }
+
+      /* ---------- Home link ---------- */
+      .home-bar { padding-top: 16px; }
+      .home-pill {
+        display: inline-block;
+        font-size: .9rem; font-weight: 600;
+        color: var(--wine);
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 16px;
+        text-decoration: none;
+        box-shadow: var(--shadow);
+      }
+      .home-pill:hover { border-color: var(--gold); color: var(--wine-deep); }
+
+      /* ---------- Opening ---------- */
+      .opening {
+        text-align: center;
+        padding: 44px 12px 8px;
+      }
+      .opening .rule {
+        width: 54px; height: 2px; margin: 0 auto 18px;
+        background: var(--gold);
+      }
+      .opening h1 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(2.3rem, 7vw, 3.4rem);
+        line-height: 1.05;
+        margin: 0 0 14px;
+        color: var(--ink);
+      }
+      .opening p {
+        max-width: 620px;
+        margin: 0 auto 10px;
+        color: var(--ink-soft);
+        font-size: 1.02rem;
+      }
+      .opening .verse {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-style: italic;
+        font-size: 1.25rem;
+        color: var(--wine);
+        margin-top: 18px;
+      }
+      .opening .verse small {
+        display: block;
+        font-family: "Spectral", Georgia, serif;
+        font-style: normal;
+        font-size: .78rem;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin-top: 4px;
+      }
+
+      /* ---------- Controls ---------- */
+      .controls {
+        position: sticky; top: 0; z-index: 20;
+        background: var(--paper);
+        padding: 16px 0 10px;
+        border-bottom: 1px solid var(--line);
+      }
+      .search-row {
+        display: flex; gap: 10px; flex-wrap: wrap; align-items: stretch;
+      }
+      .search-box {
+        flex: 1 1 240px;
+        display: flex; align-items: center; gap: 8px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 0 12px;
+      }
+      .search-box svg { flex: none; stroke: var(--ink-faint); }
+      .search-box input {
+        flex: 1; min-width: 0;
+        border: 0; background: transparent; color: var(--ink);
+        font: inherit; font-size: 1rem;
+        padding: 8px 0;
+        outline: none;
+      }
+      .search-box input::placeholder { color: var(--ink-faint); }
+      .today-btn {
+        flex: 0 1 auto;
+        font: inherit; font-weight: 600; font-size: .95rem;
+        color: #fdf6e3;
+        background: var(--wine);
+        border: 1px solid var(--wine-deep);
+        border-radius: 10px;
+        padding: 8px 18px;
+        cursor: pointer;
+      }
+      .today-btn:hover { background: var(--wine-deep); }
+      @media (prefers-color-scheme: dark) {
+        .today-btn { color: #241014; background: var(--gold); border-color: var(--gold); }
+        .today-btn:hover { background: #e0ba60; }
+      }
+      .chips {
+        display: flex; flex-wrap: wrap; gap: 8px;
+        margin-top: 12px;
+      }
+      .chip {
+        font: inherit; font-size: .88rem; font-weight: 500;
+        color: var(--ink-soft);
+        background: var(--chip-bg);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 14px;
+        cursor: pointer;
+      }
+      .chip:hover { border-color: var(--gold); color: var(--ink); }
+      .chip[aria-pressed="true"] {
+        background: var(--wine); border-color: var(--wine);
+        color: #fdf6e3;
+      }
+      @media (prefers-color-scheme: dark) {
+        .chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: #241a08; }
+      }
+      .count-line {
+        margin: 10px 2px 0;
+        font-size: .85rem; color: var(--ink-faint);
+      }
+
+      /* ---------- Spotlight ---------- */
+      .spotlight {
+        display: none;
+        margin-top: 26px;
+        background: var(--card);
+        border: 1px solid var(--gold-soft);
+        border-top: 4px solid var(--gold);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        padding: 28px 26px 22px;
+        text-align: center;
+      }
+      .spotlight.show { display: block; }
+      .spotlight .label {
+        font-size: .75rem; letter-spacing: .14em; text-transform: uppercase;
+        color: var(--gold); font-weight: 600; margin: 0 0 12px;
+      }
+      .spotlight blockquote {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-style: italic; font-weight: 600;
+        font-size: clamp(1.5rem, 4.5vw, 2rem);
+        line-height: 1.3;
+        margin: 0 auto 14px;
+        max-width: 640px;
+      }
+      .spotlight .who { font-weight: 600; color: var(--wine); }
+      .spotlight .src { color: var(--ink-faint); font-size: .88rem; margin-top: 4px; }
+
+      /* ---------- Sections & cards ---------- */
+      section.topic { margin-top: 42px; }
+      section.topic[hidden] { display: none; }
+      .topic-head {
+        display: flex; align-items: baseline; gap: 14px;
+        border-bottom: 2px solid var(--gold-soft);
+        padding-bottom: 8px; margin-bottom: 20px;
+      }
+      .topic-head h2 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.9rem; font-weight: 700; margin: 0;
+      }
+      .topic-head span { color: var(--ink-faint); font-size: .85rem; white-space: nowrap; }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      @media (min-width: 720px) {
+        .grid { grid-template-columns: 1fr 1fr; }
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        padding: 22px 22px 18px;
+        display: flex; flex-direction: column;
+      }
+      .card blockquote {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-style: italic; font-weight: 600;
+        font-size: 1.42rem; line-height: 1.32;
+        margin: 0 0 14px;
+        color: var(--ink);
+      }
+      .card .saint {
+        margin-top: auto;
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+      }
+      .card .saint .name {
+        font-weight: 600; font-size: 1rem; color: var(--wine);
+      }
+      .card .saint .years { color: var(--ink-faint); font-size: .85rem; font-weight: 400; }
+      .card .saint .bio {
+        color: var(--ink-soft); font-size: .92rem; margin-top: 3px;
+      }
+      .card .source {
+        color: var(--ink-faint); font-size: .82rem; margin-top: 8px; font-style: italic;
+      }
+      .tag {
+        display: inline-block;
+        font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+        color: var(--gold);
+        border: 1px solid var(--gold-soft);
+        border-radius: 999px;
+        padding: 2px 9px;
+        margin-left: 8px;
+        vertical-align: 2px;
+        font-style: normal;
+      }
+
+      .empty {
+        display: none;
+        text-align: center; color: var(--ink-soft);
+        padding: 48px 16px;
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-style: italic; font-size: 1.3rem;
+      }
+      .empty.show { display: block; }
+
+      /* ---------- Closing entry ---------- */
+      .closing {
+        margin-top: 64px;
+        text-align: center;
+        padding: 30px 18px 6px;
+        border-top: 1px solid var(--line);
+      }
+      .closing .closing-rule {
+        width: 38px; height: 1px; margin: 0 auto 16px;
+        background: var(--gold-soft);
+      }
+      .closing h2 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.35rem; font-weight: 600;
+        margin: 0 0 10px;
+        color: var(--ink-soft);
+      }
+      .closing p {
+        max-width: 560px;
+        margin: 0 auto;
+        color: var(--ink-faint);
+        font-size: .96rem;
+        font-style: italic;
+        line-height: 1.6;
+      }
+
+      footer {
+        margin-top: 56px;
+        border-top: 1px solid var(--line);
+        padding-top: 20px;
+        color: var(--ink-faint);
+        font-size: .88rem;
+        max-width: 680px;
+      }
+      footer p { margin: 0 0 8px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+
+      <nav class="home-bar" aria-label="Site">
+        <a class="home-pill" href="https://jesuslovestyler.com/">&#8962; Home</a>
+      </nav>
+
+      <header class="opening">
+        <div class="rule" aria-hidden="true"></div>
+        <h1>Words of the Saints</h1>
+        <p>The gathered words of our brothers and sisters in Christ — martyrs and monks, mothers and teenagers, popes and prisoners — across nineteen centuries of the Church. Each saying names its saint, who they were, and where the words come from.</p>
+        <p class="verse">&ldquo;Therefore let&rsquo;s also, seeing we are surrounded by so great a cloud of witnesses, lay aside every weight&hellip;&rdquo;
+          <small>Hebrews 12:1 &middot; World English Bible</small>
+        </p>
+      </header>
+
+      <div class="controls">
+        <div class="search-row">
+          <label class="search-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+            <input id="search" type="search" placeholder="Search a saint, a word, a topic&hellip;" aria-label="Search the sayings" />
+          </label>
+          <button class="today-btn" id="todayBtn" type="button">A word for today</button>
+        </div>
+        <div class="chips" id="chips" role="group" aria-label="Filter by topic"></div>
+        <p class="count-line" id="countLine" aria-live="polite"></p>
+      </div>
+
+      <div class="spotlight" id="spotlight" aria-live="polite">
+        <p class="label">A word for today</p>
+        <blockquote id="spotQuote"></blockquote>
+        <div class="who" id="spotWho"></div>
+        <div class="src" id="spotSrc"></div>
+      </div>
+
+      <main id="sections"></main>
+
+      <p class="empty" id="emptyMsg">No sayings match that search yet — try a saint&rsquo;s name, or a word like &ldquo;mercy&rdquo; or &ldquo;heaven.&rdquo;</p>
+
+      <div class="closing">
+        <div class="closing-rule" aria-hidden="true"></div>
+        <h2>St. Joseph</h2>
+        <p>Scripture records not one word from him. His whole saying is his obedience: he simply did what the angel said, every time. Some brothers speak loudest by silence.</p>
+      </div>
+
+      <footer>
+        <p>Most of these words are quoted from the saints&rsquo; own writings, letters, and recorded sayings. A few beloved lines come down to us by tradition rather than a surviving text — those are marked <em>attributed</em> or <em>reported</em>, so you always know which kind you&rsquo;re holding.</p>
+        <p>The cloud of witnesses is still growing. So is this page.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      var TOPICS = [
+        { id: "in-scripture", title: "Saints Speaking in Scripture" },
+        { id: "scripture", title: "On Scripture" },
+        { id: "prayer",    title: "On Prayer" },
+        { id: "trust",     title: "Faith & Trust" },
+        { id: "mercy",     title: "Love & Mercy" },
+        { id: "humility",  title: "Humility" },
+        { id: "cross",     title: "The Cross & Perseverance" },
+        { id: "heaven",    title: "Heaven & Its Crowns" },
+        { id: "joy",       title: "Joy & Peace" },
+        { id: "ordinary",  title: "Ordinary Life & Work" },
+        { id: "courage",   title: "Courage & Witness" }
+      ];
+
+      var QUOTES = [
+        /* ---------- Saints Speaking in Scripture ---------- */
+        { topic: "in-scripture",
+          quote: "Lord, to whom would we go? You have the words of eternal life.",
+          saint: "St. Peter the Apostle", years: "1st century",
+          bio: "A Galilean fisherman called by Jesus, first among the apostles — who spoke these words when many others walked away, and would not leave his Lord.",
+          source: "John 6:68 · World English Bible" },
+        { topic: "in-scripture",
+          quote: "Yes, Lord. I have come to believe that you are the Christ, God\u2019s Son, he who comes into the world.",
+          saint: "St. Martha of Bethany", years: "1st century",
+          bio: "Sister of Mary and Lazarus, who welcomed Jesus into her home at Bethany. She spoke this confession standing before her brother\u2019s tomb, moments before Jesus called him out of it.",
+          source: "John 11:27 · World English Bible" },
+        { topic: "in-scripture",
+          quote: "My Lord and my God!",
+          saint: "St. Thomas the Apostle", years: "1st century",
+          bio: "One of the Twelve, who would not believe the resurrection until he saw the risen Lord himself — and then made the fullest confession of faith in all the Gospels.",
+          source: "John 20:28 · World English Bible" },
+        { topic: "in-scripture",
+          quote: "Lord Jesus, receive my spirit! \u2026 Lord, don\u2019t hold this sin against them!",
+          saint: "St. Stephen", years: "1st century",
+          bio: "One of the first seven deacons, full of faith and the Holy Spirit. Stoned for his witness, he died as his Lord died — entrusting his spirit to Jesus and praying for those who killed him. The Church\u2019s first martyr.",
+          source: "Acts 7:59\u201360 · World English Bible" },
+
+        /* ---------- On Scripture ---------- */
+        { topic: "scripture",
+          quote: "Ignorance of the Scriptures is ignorance of Christ.",
+          saint: "St. Jerome", years: "c. 347–420",
+          bio: "Priest and Doctor of the Church who spent decades in Bethlehem translating the whole Bible into Latin — the translation the Church read for a thousand years.",
+          source: "Commentary on Isaiah, Prologue" },
+        { topic: "scripture",
+          quote: "Love the knowledge of the Scriptures, and you will not love the vices of the flesh.",
+          saint: "St. Jerome", years: "c. 347–420",
+          bio: "He wrote this to Demetrias, a young Roman widow who had given her life to Christ — urging her to guard her whole life with the Word.",
+          source: "Letter 130, to Demetrias" },
+        { topic: "scripture",
+          quote: "Holy Scripture is a stream in which the lamb can safely wade and the elephant confidently swim.",
+          saint: "St. Gregory the Great", years: "c. 540–604",
+          bio: "Pope and Doctor of the Church, a monk on the throne of St. Peter who sent missionaries to England and never stopped teaching the Bible to ordinary people.",
+          source: "Moralia in Job, Letter to Leander (as commonly rendered)" },
+        { topic: "scripture",
+          quote: "This is the cause of all evils: the ignorance of the Scriptures.",
+          saint: "St. John Chrysostom", years: "c. 347–407",
+          bio: "Archbishop of Constantinople, called \u201cGolden-Mouthed\u201d for his preaching. He begged ordinary households — not only clergy — to keep the Bible open at home.",
+          source: "From his homilies" },
+        { topic: "scripture",
+          quote: "The New Testament lies hidden in the Old, and the Old Testament is unveiled in the New.",
+          saint: "St. Augustine of Hippo", years: "354–430",
+          bio: "Bishop and Doctor of the Church. A restless young man who chased every pleasure and philosophy before Christ found him in a garden, over an open page of Paul.",
+          source: "Questions on the Heptateuch, II.73 (as commonly rendered)" },
+
+        /* ---------- On Prayer ---------- */
+        { topic: "prayer",
+          quote: "Listen carefully, my son, to the master\u2019s instructions, and attend to them with the ear of your heart.",
+          saint: "St. Benedict of Nursia", years: "c. 480–547",
+          bio: "Father of Western monasticism. His Rule for monks — gentle, practical, Christ-centered — has guided communities of prayer for fifteen centuries.",
+          source: "The Rule of St. Benedict, Prologue" },
+        { topic: "prayer",
+          quote: "Mental prayer is nothing else, in my opinion, but being on terms of friendship with God — frequently conversing in secret with Him who, we know, loves us.",
+          saint: "St. Teresa of Avila", years: "1515–1582",
+          bio: "Spanish Carmelite nun, mystic, and Doctor of the Church who reformed her order and taught a whole Church how to pray from the heart.",
+          source: "The Book of Her Life, ch. 8" },
+        { topic: "prayer",
+          quote: "There is not in the world a kind of life more sweet and delightful than that of a continual conversation with God.",
+          saint: "Brother Lawrence", years: "1614–1691",
+          bio: "A humble Carmelite lay brother who worked in the monastery kitchen and practiced God\u2019s presence while washing pots, until the kitchen became a chapel.",
+          source: "The Practice of the Presence of God" },
+        { topic: "prayer",
+          quote: "Prayer is the inner bath of love into which the soul plunges itself.",
+          saint: "St. John Vianney", years: "1786–1859",
+          bio: "The Curé d\u2019Ars — a simple parish priest in a tiny French village who heard confessions up to sixteen hours a day and brought a whole region back to God.",
+          source: "From his catechism lessons" },
+        { topic: "prayer",
+          quote: "He who prays will certainly be saved. He who does not pray will certainly be lost.",
+          saint: "St. Alphonsus Liguori", years: "1696–1787",
+          bio: "Bishop, founder of the Redemptorists, and Doctor of the Church — a brilliant lawyer who gave up the courts to preach Christ to the poorest of the poor.",
+          source: "The Great Means of Prayer" },
+
+        /* ---------- Faith & Trust ---------- */
+        { topic: "trust",
+          quote: "You have made us for yourself, O Lord, and our hearts are restless until they rest in you.",
+          saint: "St. Augustine of Hippo", years: "354–430",
+          bio: "The opening line of his Confessions — the story of his own restless years, and of every human heart that has not yet come home to God.",
+          source: "Confessions, I.1" },
+        { topic: "trust",
+          quote: "Let nothing disturb you, let nothing frighten you. All things are passing away: God never changes. Patience obtains all things. Whoever has God lacks nothing: God alone suffices.",
+          saint: "St. Teresa of Avila", years: "1515–1582",
+          bio: "She kept this little poem in her prayer book as a bookmark; it was found there after her death and has steadied frightened hearts ever since.",
+          source: "Her bookmark poem" },
+        { topic: "trust",
+          quote: "Jesus, I trust in You.",
+          saint: "St. Faustina Kowalska", years: "1905–1938",
+          bio: "A young Polish sister with little schooling, chosen to carry the message of Divine Mercy to the world. These are the words Jesus asked to have written beneath His image.",
+          source: "The Image of Divine Mercy; her Diary" },
+        { topic: "trust",
+          quote: "My Father, I abandon myself to You; do with me what You will. Whatever You do, I thank You.",
+          saint: "St. Charles de Foucauld", years: "1858–1916",
+          bio: "A French soldier and explorer who lost his faith, found it again, and ended his life as a hermit among the Tuareg people of the Sahara, living prayer in the desert.",
+          source: "Prayer of Abandonment" },
+        { topic: "trust",
+          quote: "Christian, recognize your dignity.",
+          saint: "St. Leo the Great", years: "c. 400–461",
+          bio: "Pope in the 400s who faced down Attila the Hun and taught the Church who Christ is. Preaching at Christmas, he called every Christian to remember what they had become in Him.",
+          source: "Christmas sermon" },
+        { topic: "trust",
+          quote: "Whoever seeks the truth seeks God, whether he is conscious of it or not.",
+          saint: "St. Edith Stein", years: "1891\u20131942",
+          bio: "A Jewish philosopher who read St. Teresa\u2019s Life in one night, said \u201cThis is the truth,\u201d and became a Carmelite nun. She died at Auschwitz and is also known by her religious name, Teresa Benedicta of the Cross.",
+          source: "From her letters" },
+        { topic: "trust",
+          quote: "Pray, hope, and don\u2019t worry. Worry is useless. God is merciful and will hear your prayer.",
+          saint: "St. Padre Pio", years: "1887–1968",
+          bio: "An Italian Capuchin friar who bore the wounds of Christ in his own body for fifty years and spent his life hearing confessions and praying for all who asked.",
+          source: "Attributed — his best-known counsel", tag: "Attributed" },
+
+        /* ---------- Love & Mercy ---------- */
+        { topic: "mercy",
+          quote: "The measure of love is to love without measure.",
+          saint: "St. Bernard of Clairvaux", years: "1090–1153",
+          bio: "A Cistercian abbot and Doctor of the Church whose preaching refilled empty monasteries across Europe; his writings on the love of God still burn.",
+          source: "On Loving God, ch. 1" },
+        { topic: "mercy",
+          quote: "Late have I loved you, O Beauty ever ancient, ever new \u2014 late have I loved you!",
+          saint: "St. Augustine of Hippo", years: "354\u2013430",
+          bio: "Looking back over the years he had spent running from God, Augustine grieved the lateness of his love \u2014 and marveled that the Beauty he found had been ancient and new all along.",
+          source: "Confessions" },
+        { topic: "mercy",
+          quote: "Where there is no love, put love, and you will draw out love.",
+          saint: "St. John of the Cross", years: "1542\u20131591",
+          bio: "As practical as he is deep: where love seems absent, he counsels, do not wait for it \u2014 put love there yourself, and love is what you will find.",
+          source: "Sayings of Light and Love" },
+        { topic: "mercy",
+          quote: "At the evening of life, we shall be judged on our love.",
+          saint: "St. John of the Cross", years: "1542–1591",
+          bio: "Spanish Carmelite, mystic, and Doctor of the Church. Imprisoned by his own brothers, he wrote some of the Church\u2019s deepest poetry of God\u2019s love in a prison cell.",
+          source: "Sayings of Light and Love" },
+        { topic: "mercy",
+          quote: "O Jesus, my Love, my vocation at last I have found it; it is love!",
+          saint: "St. Thérèse of Lisieux", years: "1873–1897",
+          bio: "A Carmelite nun who died at twenty-four, having lived her \u201clittle way\u201d of doing small things with great love. A Doctor of the Church — the youngest ever named.",
+          source: "Story of a Soul" },
+        { topic: "mercy",
+          quote: "Not all of us can do great things, but we can do small things with great love.",
+          saint: "St. Teresa of Calcutta", years: "1910–1997",
+          bio: "Mother Teresa, who left a teaching convent to serve the poorest of the poor in the streets of Calcutta, picking up the dying so that no one would die alone.",
+          source: "Attributed — her best-known saying", tag: "Attributed" },
+        { topic: "mercy",
+          quote: "I forgive him, and I want him to be with me in Paradise.",
+          saint: "St. Maria Goretti", years: "1890–1902",
+          bio: "An Italian farm girl who died at eleven defending her purity — and spent her last hours forgiving the man who had wounded her, praying he would be saved. He later repented and was present at her canonization.",
+          source: "Her dying words, reported by those at her bedside", tag: "Reported" },
+        { topic: "mercy",
+          quote: "Hate is not creative; only love is creative.",
+          saint: "St. Maximilian Kolbe", years: "1894–1941",
+          bio: "A Polish Franciscan who, at Auschwitz, stepped out of line and took the place of a condemned stranger — a husband and father — and died in his stead.",
+          source: "A saying reported by those who knew him", tag: "Reported" },
+        { topic: "mercy",
+          quote: "Jesus, I love you.",
+          saint: "St. Kateri Tekakwitha", years: "1656\u20131680",
+          bio: "A young Mohawk woman who gave her life to Christ despite opposition and hardship, and died at twenty-four. These were her last words, as those with her reported them.",
+          source: "Her last words, as those with her reported them", tag: "Reported" },
+        { topic: "mercy",
+          quote: "I have found the paradox \u2014 that if you love until it hurts, there can be no more hurt, only more love.",
+          saint: "St. Teresa of Calcutta", years: "1910\u20131997",
+          bio: "Founder of the Missionaries of Charity, who served the poorest of the poor in the streets of Calcutta, picking up the dying so that no one would die alone.",
+          source: "From her teaching on love" },
+        { topic: "mercy",
+          quote: "Never see a need without doing something about it.",
+          saint: "St. Mary MacKillop", years: "1842\u20131909",
+          bio: "An Australian sister who co-founded the Sisters of St Joseph and opened schools for poor and rural children across Australia and New Zealand \u2014 the first Australian to be canonized a saint.",
+          source: "Her guiding rule for her sisters" },
+
+        /* ---------- Humility ---------- */
+        { topic: "humility",
+          quote: "Abba Anthony saw all the snares of the enemy spread over the whole world, and he groaned: \u201cWho can get through them?\u201d And a voice came to him: \u201cHumility.\u201d",
+          saint: "St. Anthony the Great", years: "c. 251–356",
+          bio: "The father of monks, who heard one Gospel sentence — \u201cgo, sell what you possess\u201d — gave away his inheritance, and spent eighty years in the Egyptian desert in prayer.",
+          source: "Sayings of the Desert Fathers" },
+        { topic: "humility",
+          quote: "If you ask me what is the first precept of the Christian religion, I will answer: humility. The second: humility. And the third: humility.",
+          saint: "St. Augustine of Hippo", years: "354–430",
+          bio: "Augustine had been a proud and brilliant teacher of rhetoric; it took him years to learn that the way down is the way up.",
+          source: "Letter 118, to Dioscorus" },
+        { topic: "humility",
+          quote: "I am God\u2019s wheat, to be ground by the teeth of the beasts, so that I may be found the pure bread of Christ.",
+          saint: "St. Ignatius of Antioch", years: "d. c. 107",
+          bio: "Bishop of Antioch, taught by the apostles themselves. Chained and marched to Rome to die in the arena, he wrote seven letters on the road that the Church has treasured ever since.",
+          source: "Letter to the Romans" },
+
+        /* ---------- The Cross & Perseverance ---------- */
+        { topic: "cross",
+          quote: "Eighty-six years I have served Him, and He has never done me wrong. How then can I blaspheme my King who saved me?",
+          saint: "St. Polycarp", years: "c. 69–155",
+          bio: "Bishop of Smyrna and a disciple of the apostle John. Ordered as an old man to curse Christ or burn, he answered with this — and went to the fire praising God.",
+          source: "The Martyrdom of Polycarp" },
+        { topic: "cross",
+          quote: "This life has been given to you for repentance; do not waste it on other things.",
+          saint: "St. Isaac the Syrian", years: "7th century",
+          bio: "A monk and briefly bishop in Mesopotamia who withdrew to the desert to write about God\u2019s mercy — so tenderly that even the strictest hearts melt reading him.",
+          source: "Ascetical Homilies" },
+        { topic: "cross",
+          quote: "Keep your mind in hell, and despair not.",
+          saint: "St. Silouan the Athonite", years: "1866–1938",
+          bio: "A Russian peasant who became a monk on Mount Athos and wrestled for years with darkness and intrusive despair — until Christ gave him this word, and with it, peace.",
+          source: "Recorded by his disciple, St. Sophrony" },
+        { topic: "cross",
+          quote: "If I were to meet the slave-traders who kidnapped me and even those who tortured me, I would kneel and kiss their hands — for if it had not been for them, I would not be a Christian today.",
+          saint: "St. Josephine Bakhita", years: "c. 1869–1947",
+          bio: "Kidnapped from Sudan as a child and sold into slavery, she was bought by an Italian family, discovered Christ, and became a gentle Canossian sister in Italy.",
+          source: "From the account of her life" },
+        { topic: "cross",
+          quote: "If this is how you treat your friends, no wonder you have so few!",
+          saint: "St. Teresa of Avila", years: "1515\u20131582",
+          bio: "A story told of her by tradition: thrown in the mud on a hard journey, she is said to have answered the Lord with this honest, laughing complaint \u2014 the saints could speak to God as a friend.",
+          source: "A story told of her after a fall in the mud on a journey", tag: "Reported" },
+
+        /* ---------- Heaven & Its Crowns ---------- */
+        { topic: "heaven",
+          quote: "When God crowns our merits, He crowns nothing other than His own gifts.",
+          saint: "St. Augustine of Hippo", years: "354–430",
+          bio: "Writing to a fellow bishop about grace: every crown in heaven is real — and every ounce of it was gift from first to last.",
+          source: "Letter 194" },
+        { topic: "heaven",
+          quote: "I will spend my heaven doing good upon the earth.",
+          saint: "St. Thérèse of Lisieux", years: "1873–1897",
+          bio: "Spoken near her death at twenty-four. She did not expect heaven to be rest from love, but more love — poured back down on the world she left.",
+          source: "Her last conversations" },
+        { topic: "heaven",
+          quote: "The glory of God is a human being fully alive — and the life of man is the vision of God.",
+          saint: "St. Irenaeus of Lyons", years: "c. 130–202",
+          bio: "Bishop in Gaul who learned the faith from Polycarp, who had learned it from John. He wrote against the heresies of his day to keep the apostles\u2019 faith whole.",
+          source: "Against Heresies, IV.20" },
+        { topic: "heaven",
+          quote: "All that I have written seems like straw to me.",
+          saint: "St. Thomas Aquinas", years: "1225–1274",
+          bio: "The greatest theologian of the medieval Church. After a vision of heaven while celebrating Mass, he stopped writing altogether — the Reward had outshone the work that pointed to it.",
+          source: "Reported by his companions, December 1273", tag: "Reported" },
+        { topic: "heaven",
+          quote: "I prefer Paradise!",
+          saint: "St. Philip Neri", years: "1515–1595",
+          bio: "The joyful apostle of Rome, who gathered young men with laughter, music, and prayer. Offered a cardinal\u2019s hat, he is said to have pointed upward and answered in Italian: \u201cPreferisco il Paradiso!\u201d",
+          source: "His reported reply when offered a cardinalate", tag: "Reported" },
+        { topic: "heaven",
+          quote: "The Eucharist is my highway to heaven.",
+          saint: "St. Carlo Acutis", years: "1991–2006",
+          bio: "An Italian teenager who loved video games, built a website cataloguing Eucharistic miracles, and died of leukemia at fifteen — offering his suffering for the Church.",
+          source: "His own words, widely recorded" },
+        { topic: "heaven",
+          quote: "Verso l\u2019alto — To the heights!",
+          saint: "St. Pier Giorgio Frassati", years: "1901–1925",
+          bio: "A joyful young Italian who climbed mountains and quietly spent himself on the poor of Turin. He wrote these words on a photograph of his last climb, days before his death at twenty-four.",
+          source: "Written on a photograph of his final climb" },
+        { topic: "heaven",
+          quote: "Place your mind before the mirror of eternity. Place your soul in the brilliance of glory.",
+          saint: "St. Clare of Assisi", years: "1194–1253",
+          bio: "She ran from a noble home to follow St. Francis\u2019s way of poverty, founded the Poor Clares, and once turned back an army from her convent by prayer before the Blessed Sacrament.",
+          source: "Third Letter to St. Agnes of Prague" },
+        { topic: "heaven",
+          quote: "Go without fear, for you have a good guide for your journey.",
+          saint: "St. Clare of Assisi", years: "1194–1253",
+          bio: "Founder of the Poor Clares, who followed St. Francis\u2019s way of poverty and prayer. She spoke these words on her deathbed, speaking to her own soul as she prepared to go to God.",
+          source: "Spoken on her deathbed to her own soul" },
+        { topic: "heaven",
+          quote: "Do not weep, for I shall be more useful to you after my death.",
+          saint: "St. Dominic", years: "1170–1221",
+          bio: "Spanish priest who founded the Order of Preachers \u2014 the Dominicans \u2014 to preach the Gospel and teach the faith. These were his dying words to the brothers gathered around him.",
+          source: "His dying words to his brothers" },
+        { topic: "heaven",
+          quote: "Walk with your feet on earth, but in your heart be in heaven.",
+          saint: "St. John Bosco", years: "1815–1888",
+          bio: "An Italian priest who devoted his life to poor and abandoned boys in Turin, founding the Salesians to educate and care for them with kindness and joy.",
+          source: "Attributed \u2014 his counsel on living toward heaven", tag: "Attributed" },
+
+        /* ---------- Joy & Peace ---------- */
+        { topic: "joy",
+          quote: "Acquire the Spirit of Peace, and a thousand souls around you will be saved.",
+          saint: "St. Seraphim of Sarov", years: "1754–1833",
+          bio: "A Russian hermit who, after years of silence in the forest, opened his door to everyone — greeting each visitor, even in Lent, with \u201cChrist is risen, my joy!\u201d",
+          source: "His conversation with Nicholas Motovilov" },
+        { topic: "joy",
+          quote: "All shall be well, and all shall be well, and all manner of thing shall be well.",
+          saint: "St. Julian of Norwich", years: "c. 1342–after 1416",
+          bio: "An English anchoress who lived in a small cell beside a church, received sixteen showings of God\u2019s love during a near-death illness, and spent decades pondering them.",
+          source: "Revelations of Divine Love" },
+        { topic: "joy",
+          quote: "Be who you are, and be that well, in order to bring honor to the Master Craftsman.",
+          saint: "St. Francis de Sales", years: "1567–1622",
+          bio: "Bishop of Geneva and Doctor of the Church, famous for winning hearts with gentleness when harshness had failed. His Introduction to the Devout Life taught holiness to people living ordinary lives.",
+          source: "From his letters of spiritual direction" },
+        { topic: "joy",
+          quote: "Have patience with all things, but chiefly have patience with yourself.",
+          saint: "St. Francis de Sales", years: "1567\u20131622",
+          bio: "The gentle bishop knew how harshly people judge their own slow growth. His counsel begins at home: patience with everyone, and first of all with yourself.",
+          source: "From his letters of spiritual direction" },
+        { topic: "joy",
+          quote: "Christ with me, Christ before me, Christ behind me, Christ in me, Christ beneath me, Christ above me, Christ on my right, Christ on my left.",
+          saint: "St. Patrick", years: "5th century",
+          bio: "Kidnapped to Ireland as a boy, he escaped — then returned as a bishop to bring Christ to the very people who had enslaved him. This prayer of protection bears his name.",
+          source: "St. Patrick\u2019s Breastplate (the Lorica)", tag: "Attributed" },
+        { topic: "joy",
+          quote: "I would like a lake of beer for the King of kings. I would like the angels of heaven to be drinking it through time eternal.",
+          saint: "St. Brigid of Ireland", years: "c. 451\u2013525",
+          bio: "One of Ireland\u2019s patron saints, an abbess who founded the monastery at Kildare and was famed for her generosity to the poor. This joyful poem of heaven\u2019s feast is attributed to her.",
+          source: "From a poem attributed to her", tag: "Attributed" },
+
+        /* ---------- Ordinary Life & Work ---------- */
+        { topic: "ordinary",
+          quote: "Either we learn to find our Lord in ordinary, everyday life, or else we shall never find Him.",
+          saint: "St. Josemaría Escrivá", years: "1902–1975",
+          bio: "A Spanish priest who taught that holiness is not reserved for monasteries — that work, family, and daily duty, offered to God, are the ordinary road to heaven.",
+          source: "Conversations with Monsignor Escrivá" },
+        { topic: "ordinary",
+          quote: "Let all guests who arrive be received like Christ.",
+          saint: "St. Benedict of Nursia", years: "c. 480–547",
+          bio: "Hospitality written into the daily rule of his monasteries in the 500s: every stranger at the door was to be welcomed as Christ himself — Matthew 25, lived at the threshold.",
+          source: "The Rule of St. Benedict, ch. 53" },
+        { topic: "ordinary",
+          quote: "We ought not to be weary of doing little things for the love of God, who regards not the greatness of the work, but the love with which it is performed.",
+          saint: "Brother Lawrence", years: "1614–1691",
+          bio: "He said this of kitchen work and mending sandals — the small duties of an unknown brother, done with God in mind, became his whole path to sanctity.",
+          source: "The Practice of the Presence of God" },
+        { topic: "ordinary",
+          quote: "God has created me to do Him some definite service. He has committed some work to me which He has not committed to another.",
+          saint: "St. John Henry Newman", years: "1801–1890",
+          bio: "An English scholar and priest whose honest search for truth led him from Oxford into the Catholic Church. A cardinal, and one of the great Christian writers of his century.",
+          source: "Meditations and Devotions" },
+        { topic: "ordinary",
+          quote: "The first end I propose in our daily work is to do the will of God; secondly, to do it in the manner He wills it; and thirdly, to do it because it is His will.",
+          saint: "St. Elizabeth Ann Seton", years: "1774–1821",
+          bio: "A widowed mother of five in New York who became Catholic, founded a religious order, and started the first free Catholic school in the United States.",
+          source: "From her writings" },
+        { topic: "ordinary",
+          quote: "If we wish to serve God and love our neighbor well, we must manifest our joy in the service we render to Him and them.",
+          saint: "St. Katharine Drexel", years: "1858–1955",
+          bio: "An heiress from Philadelphia who gave away one of the great American fortunes to found schools for Native American and Black children across the country.",
+          source: "From her writings" },
+        { topic: "ordinary",
+          quote: "Always forward, never back.",
+          saint: "St. Junípero Serra", years: "1713–1784",
+          bio: "A Spanish Franciscan who walked thousands of miles up the California coast founding missions, lame leg and all. \u201cSiempre adelante, nunca atrás\u201d was the motto he lived by.",
+          source: "His lifelong motto" },
+        { topic: "ordinary",
+          quote: "Let us love God, but let it be at the expense of our arms and in the sweat of our brow.",
+          saint: "St. Vincent de Paul", years: "1581–1660",
+          bio: "A French priest who spent his life serving the poor and founded congregations to carry that work on. For him, love of God was not a feeling but labor — love with sleeves rolled up.",
+          source: "From his conferences" },
+
+        /* ---------- Courage & Witness ---------- */
+        { topic: "courage",
+          quote: "If you are what you ought to be, you will set fire to all Italy — and not only that.",
+          saint: "St. Catherine of Siena", years: "1347–1380",
+          bio: "A young Dominican tertiary with no formal schooling whose letters rebuked princes and persuaded a pope. A Doctor of the Church; she wrote this to a friend hesitant about his calling.",
+          source: "Letter to Stefano Maconi" },
+        { topic: "courage",
+          quote: "I am not afraid. I was born to do this.",
+          saint: "St. Joan of Arc", years: "c. 1412–1431",
+          bio: "A teenage farm girl from Domrémy who led French armies at God\u2019s command, was captured, tried, and burned at nineteen — her last word was the name of Jesus.",
+          source: "Her reported words", tag: "Reported" },
+        { topic: "courage",
+          quote: "I make myself a leper with the lepers, to gain all to Jesus Christ.",
+          saint: "St. Damien of Molokai", years: "1840–1889",
+          bio: "A Belgian priest who volunteered for the leper colony on Molokai, Hawaii, knowing few ever left. He rebuilt its people\u2019s dignity, caught the disease himself, and died among them.",
+          source: "From his letters" },
+        { topic: "courage",
+          quote: "I am bound, as a pastor, by divine command to give my life for those whom I love — and that includes all Salvadorans, even those who are going to kill me.",
+          saint: "St. Óscar Romero", years: "1917–1980",
+          bio: "Archbishop of San Salvador, who defended the poor against a violent regime knowing the cost. He was shot while celebrating Mass, one day after ordering soldiers to stop the killing.",
+          source: "From an interview shortly before his martyrdom" },
+        { topic: "courage",
+          quote: "If they kill me, I shall arise in the Salvadoran people.",
+          saint: "St. \u00d3scar Romero", years: "1917\u20131980",
+          bio: "Archbishop of San Salvador, who defended the poor against a violent regime knowing the cost. He spoke these words shortly before his martyrdom, trusting his witness would outlive him.",
+          source: "Said shortly before his martyrdom" },
+        { topic: "courage",
+          quote: "Do not be afraid. Open wide the doors for Christ.",
+          saint: "St. John Paul II", years: "1920\u20132005",
+          bio: "A Polish pope who had lived under both Nazi and Communist rule. He opened his papacy in 1978 with this call \u2014 the words that set the tone for twenty-six years.",
+          source: "Inaugural homily, 1978" },
+        { topic: "courage",
+          quote: "Hold the cross high, so I may see it through the flames.",
+          saint: "St. Joan of Arc", years: "c. 1412\u20131431",
+          bio: "A teenage farm girl from Domr\u00e9my who led French armies at God\u2019s command, was captured, tried, and burned at nineteen. At the stake in Rouen she asked for one thing: a cross held high, where she could see it.",
+          source: "At the stake in Rouen", tag: "Reported" },
+        { topic: "courage",
+          quote: "Turn me over; I am done on this side.",
+          saint: "St. Lawrence", years: "d. 258",
+          bio: "A deacon of Rome entrusted with the Church\u2019s care for the poor. Tradition tells that he was martyred on a gridiron, and spoke these words to his executioners.",
+          source: "Martyred on a gridiron in Rome", tag: "Tradition" },
+        { topic: "courage",
+          quote: "I die the King\u2019s good servant, and God\u2019s first.",
+          saint: "St. Thomas More", years: "1478\u20131535",
+          bio: "English lawyer, author, and Lord Chancellor who would not deny his faith to please King Henry VIII. These were his last words on the scaffold.",
+          source: "His last words on the scaffold", tag: "Reported" },
+        { topic: "courage",
+          quote: "I am a Catholic priest. I want to die in place of this man.",
+          saint: "St. Maximilian Kolbe", years: "1894\u20131941",
+          bio: "A Polish Franciscan friar imprisoned at Auschwitz. When a fellow prisoner \u2014 a husband and father \u2014 was condemned to die, he stepped forward and offered his own life in the man\u2019s place.",
+          source: "Stepping forward at Auschwitz, as the witnesses remembered it", tag: "Reported" },
+        { topic: "courage",
+          quote: "If I had a thousand lives, I would offer them all to God.",
+          saint: "St. Lorenzo Ruiz", years: "c. 1600\u20131637",
+          bio: "A Filipino husband and father who was martyred at Nagasaki, Japan, refusing under torture to renounce his Catholic faith.",
+          source: "His words under martyrdom in Japan", tag: "Reported" }
+      ];
+
+      var sectionsEl = document.getElementById("sections");
+      var chipsEl = document.getElementById("chips");
+      var searchEl = document.getElementById("search");
+      var countEl = document.getElementById("countLine");
+      var emptyEl = document.getElementById("emptyMsg");
+      var activeTopic = "all";
+
+      function esc(s) {
+        return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      }
+
+      function cardHTML(q) {
+        var tag = q.tag ? '<span class="tag">' + esc(q.tag) + "</span>" : "";
+        return '<article class="card">' +
+          "<blockquote>&ldquo;" + esc(q.quote) + "&rdquo;</blockquote>" +
+          '<div class="saint"><span class="name">' + esc(q.saint) + "</span> " +
+          '<span class="years">' + esc(q.years) + "</span>" +
+          '<div class="bio">' + esc(q.bio) + "</div>" +
+          '<div class="source">' + esc(q.source) + tag + "</div></div></article>";
+      }
+
+      /* Build topic sections once */
+      TOPICS.forEach(function (t) {
+        var sec = document.createElement("section");
+        sec.className = "topic";
+        sec.id = "topic-" + t.id;
+        var items = QUOTES.filter(function (q) { return q.topic === t.id; });
+        sec.innerHTML = '<div class="topic-head"><h2>' + esc(t.title) + "</h2><span>" +
+          items.length + (items.length === 1 ? " saying" : " sayings") + '</span></div>' +
+          '<div class="grid">' + items.map(cardHTML).join("") + "</div>";
+        sectionsEl.appendChild(sec);
+      });
+
+      /* Build chips */
+      var chipDefs = [{ id: "all", title: "All topics" }].concat(TOPICS);
+      chipDefs.forEach(function (t) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "chip";
+        b.textContent = t.title;
+        b.setAttribute("aria-pressed", t.id === "all" ? "true" : "false");
+        b.addEventListener("click", function () {
+          activeTopic = t.id;
+          var all = chipsEl.querySelectorAll(".chip");
+          for (var i = 0; i < all.length; i++) {
+            all[i].setAttribute("aria-pressed", all[i] === b ? "true" : "false");
+          }
+          applyFilters();
+        });
+        chipsEl.appendChild(b);
+      });
+
+      function applyFilters() {
+        var term = searchEl.value.trim().toLowerCase();
+        var shown = 0;
+        TOPICS.forEach(function (t) {
+          var sec = document.getElementById("topic-" + t.id);
+          var topicOK = (activeTopic === "all" || activeTopic === t.id);
+          var cards = sec.querySelectorAll(".card");
+          var secShown = 0;
+          for (var i = 0; i < cards.length; i++) {
+            var q = QUOTES.filter(function (x) { return x.topic === t.id; })[i];
+            var text = (q.quote + " " + q.saint + " " + q.bio + " " + q.source).toLowerCase();
+            var ok = topicOK && (term === "" || text.indexOf(term) !== -1);
+            cards[i].style.display = ok ? "" : "none";
+            if (ok) secShown++;
+          }
+          sec.hidden = secShown === 0;
+          shown += secShown;
+        });
+        countEl.textContent = shown === QUOTES.length
+          ? QUOTES.length + " sayings from " + countSaints() + " saints"
+          : "Showing " + shown + " of " + QUOTES.length + " sayings";
+        emptyEl.classList.toggle("show", shown === 0);
+      }
+
+      function countSaints() {
+        var seen = {};
+        QUOTES.forEach(function (q) { seen[q.saint] = true; });
+        return Object.keys(seen).length;
+      }
+
+      searchEl.addEventListener("input", applyFilters);
+      applyFilters();
+
+      /* A word for today */
+      var spot = document.getElementById("spotlight");
+      var lastIdx = -1;
+      document.getElementById("todayBtn").addEventListener("click", function () {
+        var idx;
+        do { idx = Math.floor(Math.random() * QUOTES.length); } while (QUOTES.length > 1 && idx === lastIdx);
+        lastIdx = idx;
+        var q = QUOTES[idx];
+        document.getElementById("spotQuote").innerHTML = "&ldquo;" + esc(q.quote) + "&rdquo;";
+        document.getElementById("spotWho").textContent = q.saint + " \u00B7 " + q.years;
+        document.getElementById("spotSrc").textContent = q.source;
+        spot.classList.add("show");
+        spot.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+</script>
+    <script data-goatcounter="https://jesuslovestyler.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
